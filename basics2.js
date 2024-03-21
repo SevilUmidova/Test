@@ -199,8 +199,11 @@ let test3 = "This is a test"
 console.log(test1.concat(" from isds"))
 
 //3
-// function countVowels(sentence){
 
+
+//corrected version below
+// function countVowels(sentence){
+  
 //   for (let i=0; i < sentence.length;i++){
 //     if (vowelss.includes(sentence[i])){
 //       res += 1
@@ -208,41 +211,25 @@ console.log(test1.concat(" from isds"))
 //   }
 //   return res
 // }
-// let firstSentence = "Taking a Computer Science course"
-// let newSentence = firstSentence.toLowerCase()
-// const vowelss = ["a", "e", "i", "o", "u"]
-// let res = 0
-// countVowels(sentence)
-// console.log(res)
-
-//corrected version below
-function countVowels(sentence){
-
-  for (let i=0; i < sentence.length;i++){
-    if (vowelss.includes(sentence[i])){
-      res += 1
-    }
-  }
-  return res
-}
-
-sentence.toLowerCase()
-const vowelss = ["a", "e", "i", "o", "u"]
-let res = 0
-countVowels("Taking a Computer Science course")
-console.log(res)
-
-// function countVowels(sentence){
-
-//   sentence.forEach(element) => if (vowelss.includes(sentence[i])){
-//       res += 1
-//     }
-  
-//   return res
-// }
-
-// let newSentence = sentence.toLowerCase()
+// sentence.toLowerCase()
 // const vowelss = ["a", "e", "i", "o", "u"]
 // let res = 0
 // countVowels("Taking a Computer Science course")
 // console.log(res)
+
+
+//corrected version using foreach below
+function countVowels(sentence) {
+  let newSentence = sentence.toLowerCase()
+  const vowels = ["a", "e", "i", "o", "u"]
+  
+  newSentence.split('').forEach(character => {
+    if (vowels.includes(character)) {
+      res += 1
+    }
+  });
+  return res
+}
+let res = 0
+countVowels("Taking a Computer Science cours")
+console.log(res)
